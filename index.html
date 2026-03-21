@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnonimFX - Analize și tranzacții reale</title>
+    <meta name="description"
+        content="Analize și tranzacții reale de la un trader român în Top 500 FundingPips. Intră în grupul de Telegram pentru analize zilnice și mentorat.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Pill Navigation -->
+    <nav class="floating-nav">
+        <div class="nav-brand">
+            <div class="logo-container">
+                <div class="logo-glow"></div>
+                <img src="logo.png" alt="AnonimFX Logo" class="nav-logo">
+                <div class="logo-ring"></div>
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">
+                    <span class="brand-fx">ANONIM</span><span class="brand-accent">FX</span>
+                </span>
+                <span class="brand-tagline">
+                    <span class="tagline-dot"></span>
+                    TRADING COMMUNITY
+                </span>
+            </div>
+        </div>
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div class="nav-links horizontal-menu">
+            <a href="#despre">Despre mine</a>
+            <a href="#payouts">Payouts</a>
+            <a href="#mentorat">Mentorat</a>
+            <a href="#comunitate">Comunitate</a>
+            <a href="https://t.me/anonimfxro" target="_blank" class="nav-cta glow-effect">Intra in Grup</a>
+        </div>
+    </nav>
+
+    <!-- 1. Header / Home Section -->
+    <header class="hero-section" id="hero">
+        <!-- Particles.js Background -->
+        <div id="particles-js"></div>
+        <div class="hero-overlay"></div>
+
+        <!-- Animated gradient orbs -->
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+
+        <div class="hero-content container">
+            <div class="hero-text-col">
+                <div class="badge-label">🟢 Top 500 FundingPips Worldwide</div>
+                <h1 class="hero-headline">
+                    Tranzactii reale de la un <span class="highlight">trader roman</span> cu rezultate dovedite
+                </h1>
+                <p class="hero-subheadline">Trader profesionist cu certificate internationale si peste $115,000+ in payouts reale. Mentorat personalizat si comunitate activa pe Telegram.</p>
+
+                <div class="hero-actions">
+                    <a href="https://t.me/anonimfxro" target="_blank" class="cta-button primary-cta glow-effect">
+                        INTRA IN GRUP TELEGRAM
+                    </a>
+                    <a href="#despre" class="cta-button outline-cta">
+                        Afla mai multe
+                    </a>
+                </div>
+
+                <!-- Hero Stats Row -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">$115K+</span>
+                        <span class="stat-label">Total Payouts</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">Top 500</span>
+                        <span class="stat-label">FundingPips Global</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">CMSA</span>
+                        <span class="stat-label">Certificat CFI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-col">
+                <div class="hero-visual-wrapper" data-tilt>
+                    <!-- Animated glow behind image -->
+                    <div class="image-glow-aura"></div>
+                    
+                    <!-- Image frame with animated gradient border -->
+                    <div class="image-frame">
+                        <div class="image-frame-border"></div>
+                        <img src="poza_cu_mine.jpg.png" alt="Trader Success Story" class="hero-personal-image">
+                    </div>
+                    
+                    <!-- Floating Glass Badges - Redesigned -->
+                    <div class="floating-badge badge-top-right">
+                        <div class="badge-icon-wrap">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                        </div>
+                        <div class="badge-info">
+                            <span class="badge-title">FUNDINGPIPS</span>
+                            <span class="badge-value">+$40,204</span>
+                        </div>
+                        <div class="badge-pulse-dot"></div>
+                    </div>
+                    <div class="floating-badge badge-bottom-left">
+                        <div class="badge-icon-wrap">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M16 8l-4 4-4-4"></path><path d="M12 12v6"></path></svg>
+                        </div>
+                        <div class="badge-info">
+                            <span class="badge-title">ALPHA CAPITAL</span>
+                            <span class="badge-value">+$31,759</span>
+                        </div>
+                        <div class="badge-pulse-dot"></div>
+                    </div>
+                    <div class="floating-badge badge-bottom-right">
+                        <div class="badge-icon-wrap">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <div class="badge-info">
+                            <span class="badge-title">FUNDEDNEXT</span>
+                            <span class="badge-value">+$35,000</span>
+                        </div>
+                        <div class="badge-pulse-dot"></div>
+                    </div>
+
+                    <!-- Verified trader badge -->
+                    <div class="verified-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--accent-green)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <span>Verified Trader</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Despre Mine Section -->
+    <section class="about-section" id="despre">
+        <!-- Animated gradient orbs -->
+        <div class="about-orb about-orb-1"></div>
+        <div class="about-orb about-orb-2"></div>
+        <div class="about-orb about-orb-3"></div>
+        <!-- Grid overlay -->
+        <div class="about-grid-overlay"></div>
+
+        <div class="container">
+            <div class="about-section-badge">🏆 Despre Mine</div>
+            <div class="about-grid">
+                <div class="about-text-col">
+                    <h2 class="section-title">Trader profesionist <br><span class="highlight">cu rezultate dovedite</span></h2>
+                    <div class="about-description">
+                        <p>Sunt Silviu Dumitras, trader activ pe pietele financiare cu focus pe XAUUSD, EURUSD si GBPUSD. Am acumulat peste <strong>$115,000 in payouts</strong> reale de la firme de prop trading recunoscute international - FundingPips, Alpha Capital, FundedNext si altele.</p>
+                        <p>Detin certificarea <strong>CMSA (Capital Markets &amp; Securities Analyst)</strong> de la Corporate Finance Institute si sunt in <strong>Top 500 traderi FundingPips</strong> la nivel global.</p>
+                        <p>Ca mentor, am ajutat zeci de traderi romani sa-si construiasca un plan de trading solid, bazat pe price action, analiza tehnica si fundamentala, si mai ales pe disciplina si psihologie.</p>
+                    </div>
+                </div>
+
+                <div class="about-video-col">
+                    <h3 class="featured-heading">
+                        <span class="featured-dot"></span>
+                        Featured in
+                    </h3>
+                    <div class="about-video-frame">
+                        <div class="about-video-frame-border"></div>
+                        <div class="video-wrapper">
+                            <div class="iframe-container">
+                                <iframe src="https://www.youtube.com/embed/AbxvKncbReU" title="FundingPips Success Story" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-info">
+                                <span class="video-label">FUNDINGPIPS</span>
+                                <p>$43K in Total Rewards After 3 Years of Losses - Success Story</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="video-disclaimer">+ Interviuri cu Alpha Capital, Ionut Manea si alte aparitii in comunitatea de trading romaneasca.</p>
+                </div>
+            </div>
+
+            <!-- Badges row - full width below -->
+            <div class="about-cards-grid">
+                <div class="about-card">
+                    <div class="about-card-inner">
+                        <div class="about-card-glow"></div>
+                        <div class="about-card-icon-wrap">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        </div>
+                        <div class="card-content">
+                            <h4>Swing Trading</h4>
+                            <p>XAUUSD, EURUSD, GBPUSD</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-inner">
+                        <div class="about-card-glow"></div>
+                        <div class="about-card-icon-wrap">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <div class="card-content">
+                            <h4>Top 500 Global</h4>
+                            <p>FundingPips Worldwide</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-inner">
+                        <div class="about-card-glow"></div>
+                        <div class="about-card-icon-wrap">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 10 3 12 0v-5"></path></svg>
+                        </div>
+                        <div class="card-content">
+                            <h4>Certificat CMSA</h4>
+                            <p>Corporate Finance Institute</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-inner">
+                        <div class="about-card-glow"></div>
+                        <div class="about-card-icon-wrap">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <div class="card-content">
+                            <h4>$115K+ Payouts</h4>
+                            <p>Rezultate reale, verificabile</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Payouts Section -->
+    <section class="payouts-section" id="payouts">
+        <!-- Animated gradient orbs -->
+        <div class="about-orb about-orb-1"></div>
+        <div class="about-orb about-orb-2"></div>
+        <div class="about-grid-overlay"></div>
+
+        <div class="container">
+            <div class="payouts-header">
+                <div>
+                    <div class="about-section-badge">💰 Dovezi Reale</div>
+                    <h2 class="section-title">Payouts</h2>
+                </div>
+                <div class="payouts-total">
+                    <span class="payouts-total-value">$115K<span class="highlight">+</span></span>
+                    <span class="payouts-total-label">Total Payouts</span>
+                </div>
+            </div>
+
+            <div class="payouts-grid">
+                <!-- Payout Certificate 1 -->
+                <div class="payout-card">
+                    <div class="payout-card-border"></div>
+                    <div class="payout-card-inner">
+                        <img src="08772682-6761-4a80-ba58-fcea1a95e7c5.jpg" class="payout-image" alt="Payout Certificate 1">
+                    </div>
+                </div>
+                <!-- Payout Certificate 2 -->
+                <div class="payout-card">
+                    <div class="payout-card-border"></div>
+                    <div class="payout-card-inner">
+                        <img src="67cae879-8051-4b0c-92c0-413c6e361080.jpg" class="payout-image" alt="Payout Certificate 2">
+                    </div>
+                </div>
+                <!-- Payout Certificate 3 -->
+                <div class="payout-card">
+                    <div class="payout-card-border"></div>
+                    <div class="payout-card-inner">
+                        <img src="683a6ced-41a9-4599-9208-46a903403b1b.jpg" class="payout-image" alt="Payout Certificate 3">
+                    </div>
+                </div>
+                <!-- Payout Certificate 4 -->
+                <div class="payout-card">
+                    <div class="payout-card-border"></div>
+                    <div class="payout-card-inner">
+                        <img src="73634411-6153-4862-99cc-9ebf17facb2c.jpg" class="payout-image" alt="Payout Certificate 4">
+                    </div>
+                </div>
+                <!-- Payout Certificate 5 -->
+                <div class="payout-card">
+                    <div class="payout-card-border"></div>
+                    <div class="payout-card-inner">
+                        <img src="bd6b4cac-a471-4f41-8dda-525786ee85ed.jpg" class="payout-image" alt="Payout Certificate 5">
+                    </div>
+                </div>
+                <!-- Payout Certificate 6 -->
+                <div class="payout-card">
+                    <div class="payout-card-border"></div>
+                    <div class="payout-card-inner">
+                        <img src="ca3324c0-ea8d-4a7c-ae4f-3666a5e8d7d1.jpg" class="payout-image" alt="Payout Certificate 6">
+                    </div>
+                </div>
+                <!-- Payout Certificate 7 -->
+                <div class="payout-card">
+                    <div class="payout-card-border"></div>
+                    <div class="payout-card-inner">
+                        <img src="d8277f6f-9431-4069-85af-78d78e88767b (1).jpg" class="payout-image" alt="Payout Certificate 7">
+                    </div>
+                </div>
+                <!-- Payout Certificate 8 -->
+                <div class="payout-card">
+                    <div class="payout-card-border"></div>
+                    <div class="payout-card-inner">
+                        <img src="feb530cc-1ac0-4d38-b302-5cdf34244630.jpg" class="payout-image" alt="Payout Certificate 8">
+                    </div>
+                </div>
+                <!-- Payout Certificate 9 -->
+                <div class="payout-card">
+                    <div class="payout-card-border"></div>
+                    <div class="payout-card-inner">
+                        <img src="6551e799-a952-4806-8568-dba0c472836a.jpg" class="payout-image" alt="Payout Certificate 9">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Certification Section -->
+    <section class="certification-section" id="certificare">
+        <div class="about-orb about-orb-1"></div>
+        <div class="about-orb about-orb-2"></div>
+        <div class="about-grid-overlay"></div>
+
+        <div class="container">
+            <div class="cert-grid">
+                <!-- Left: Certificate Image -->
+                <div class="cert-image-col">
+                    <div class="cert-visual-wrapper" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                        <div class="image-glow-aura"></div>
+                        <div class="image-frame">
+                            <div class="image-frame-border"></div>
+                            <img src="bd2b1a18-b6f2-40f3-af19-17aa65ec93b2.jpg" alt="CMSA Certificate" class="cert-image payout-image">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Text Content -->
+                <div class="cert-text-col">
+                    <div class="about-section-badge">🏆 CERTIFICARE INTERNAȚIONALĂ</div>
+                    <h2 class="section-title cert-hero-title">Trader Certificat <br><span class="cert-neon-text">CFI / CMSA®</span></h2>
+                    
+                    <div class="cert-description">
+                        <p>Sunt certificat internațional de CFI care atestă cunoștințe avansate de Trading și Piețe Financiare, astfel încât să-mi lărgesc know-how-ul în domeniu și să fiu și atestat „cu diplomă”.</p>
+                        <p><strong>CFI (Corporate Finance Institute)</strong> este un program de multiple certificări pentru persoane care merg spre o carieră în piețe de capital. Personal mi-am obținut licența de CMSA!</p>
+                        <p><strong>CMSA</strong> – Capital Markets & Securities Analyst — o certificare de la CFI care te formează pe piețe de capital și instrumente financiare (acțiuni, obligațiuni, FX, mărfuri, derivate), pentru roluri de tip buy-side și sell-side (trading, research, asset management).</p>
+                        <p>Programul de licență este destinat pentru analiști și traderi pe acțiuni, fixed income, FX, commodities, sales & trading, buy-side/sell-side.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill Tags Moved Below Grid -->
+            <div class="skill-tags skill-tags-fullwidth">
+                <span class="skill-tag">Piețe de Capital</span>
+                <span class="skill-tag">FX & Commodities</span>
+                <span class="skill-tag">Trading & Research</span>
+                <span class="skill-tag">Asset Management</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Mentorat Section -->
+    <section class="mentorship-section" id="mentorat">
+        <div class="container">
+            <h2 class="section-title text-center">Mentorat & <span class="highlight">Rezultate</span></h2>
+            <p class="section-description text-center">Feedback din partea comunității și a celor care au urmat
+                analizele zilnice.</p>
+
+            <div class="feedback-grid">
+                <!-- User adds feedback screenshots here -->
+                <div class="feedback-card glass-panel">
+                    <div class="placeholder-feedback">🚀 "Am trecut evaluarea de 50k în doar două săptămâni urmărind
+                        analizele zilnice!" - Elev</div>
+                </div>
+                <div class="feedback-card glass-panel">
+                    <div class="placeholder-feedback">📊 "Mentorat extraordinar. Claritate maximă pe grafic și risk
+                        management adevărat." - Elev</div>
+                </div>
+                <div class="feedback-card glass-panel">
+                    <div class="placeholder-feedback">💵 "Primul payout obținut mulțumită direcției zilnice din grup." -
+                        Elev</div>
+                </div>
+            </div>
+
+            <div class="text-center cta-container">
+                <a href="https://t.me/anonimfxro" target="_blank" class="cta-button huge-green-cta glow-effect">
+                    Vezi canalul Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Grup Telegram - Beneficii -->
+    <section class="benefits-section" id="beneficii">
+        <div class="container">
+            <h2 class="section-title text-center">De ce să intri în <span class="highlight">Grupul VIP / Gratis</span>?
+            </h2>
+
+            <div class="features-grid">
+                <div class="feature-box glass-panel glow-hover" data-tilt data-tilt-max="8" data-tilt-speed="400"
+                    data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="icon">📈</div>
+                    <h3>Analize Zilnice</h3>
+                    <p>Briefing-uri complete în fiecare dimineață pentru a înțelege exact bias-ul zilei pe perechile
+                        majore.</p>
+                </div>
+                <div class="feature-box glass-panel glow-hover" data-tilt data-tilt-max="8" data-tilt-speed="400"
+                    data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="icon">⚡</div>
+                    <h3>Alertă Tranzacții</h3>
+                    <p>Notificări în timp real când se conturează un setup de calitate și puncte clare de invalidare.
+                    </p>
+                </div>
+                <div class="feature-box glass-panel glow-hover" data-tilt data-tilt-max="8" data-tilt-speed="400"
+                    data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="icon">🧠</div>
+                    <h3>Mentorat Continuu</h3>
+                    <p>Discuții pe grafice, lecții de psihologie a tranzacționării și ajustări pe parcursul săptămânii.
+                    </p>
+                </div>
+                <div class="feature-box glass-panel glow-hover" data-tilt data-tilt-max="8" data-tilt-speed="400"
+                    data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="icon">🤝</div>
+                    <h3>Comunitate Activă</h3>
+                    <p>Ești înconjurat de traderi români serioși cu același obiectiv: obținerea și păstrarea conturilor
+                        finanțate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Footer / Optional Curs -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-cta">
+                    <h2>Ești gata să îți schimbi modul de tranzacționare?</h2>
+                    <a href="https://t.me/your_telegram_link" target="_blank"
+                        class="cta-button huge-green-cta footer-btn pulse-effect">
+                        ALĂTURĂ-TE ACUM
+                    </a>
+                </div>
+                <p class="disclaimer">Tranzacționarea pe piețele financiare implică un grad ridicat de risc și poate să
+                    nu fie potrivită pentru toți investitorii. Performanțele trecute nu garantează rezultate viitoare.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Particles.js - Animated Background -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- VanillaTilt.js - 3D Card Hover -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <!-- Typed.js - Typewriter Effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/lib/typed.umd.js"></script>
+
+    <!-- Lightbox Modal for Payouts -->
+    <div class="image-modal" id="imageModal">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Interactive script -->
+    <script src="main.js"></script>
+</body>
+
+</html>
