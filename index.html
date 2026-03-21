@@ -13,6 +13,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@500;700&display=swap"
         rel="stylesheet">
+    <!-- Swiper.js for Swipe Gallery -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -159,18 +161,18 @@
         <div class="about-grid-overlay"></div>
 
         <div class="container">
-            <div class="about-section-badge">🏆 Despre Mine</div>
+            <div class="about-section-badge reveal">🏆 Despre Mine</div>
             <div class="about-grid">
                 <div class="about-text-col">
-                    <h2 class="section-title">Trader profesionist <br><span class="highlight">cu rezultate dovedite</span></h2>
-                    <div class="about-description">
+                    <h2 class="section-title reveal delay-1">Trader profesionist <br><span class="highlight">cu rezultate dovedite</span></h2>
+                    <div class="about-description reveal delay-2">
                         <p>Sunt Silviu Dumitras, trader activ pe pietele financiare cu focus pe XAUUSD, EURUSD si GBPUSD. Am acumulat peste <strong>$115,000 in payouts</strong> reale de la firme de prop trading recunoscute international - FundingPips, Alpha Capital, FundedNext si altele.</p>
                         <p>Detin certificarea <strong>CMSA (Capital Markets &amp; Securities Analyst)</strong> de la Corporate Finance Institute si sunt in <strong>Top 500 traderi FundingPips</strong> la nivel global.</p>
                         <p>Ca mentor, am ajutat zeci de traderi romani sa-si construiasca un plan de trading solid, bazat pe price action, analiza tehnica si fundamentala, si mai ales pe disciplina si psihologie.</p>
                     </div>
                 </div>
 
-                <div class="about-video-col">
+                <div class="about-video-col reveal delay-3">
                     <h3 class="featured-heading">
                         <span class="featured-dot"></span>
                         Featured in
@@ -179,7 +181,7 @@
                         <div class="about-video-frame-border"></div>
                         <div class="video-wrapper">
                             <div class="iframe-container">
-                                <iframe src="https://www.youtube.com/embed/AbxvKncbReU" title="FundingPips Success Story" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/AbxvKncbReU" title="FundingPips Success Story" allowfullscreen loading="lazy"></iframe>
                             </div>
                             <div class="video-info">
                                 <span class="video-label">FUNDINGPIPS</span>
@@ -193,7 +195,7 @@
 
             <!-- Badges row - full width below -->
             <div class="about-cards-grid">
-                <div class="about-card">
+                <div class="about-card reveal">
                     <div class="about-card-inner">
                         <div class="about-card-glow"></div>
                         <div class="about-card-icon-wrap">
@@ -205,7 +207,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-card">
+                <div class="about-card reveal">
                     <div class="about-card-inner">
                         <div class="about-card-glow"></div>
                         <div class="about-card-icon-wrap">
@@ -217,7 +219,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-card">
+                <div class="about-card reveal">
                     <div class="about-card-inner">
                         <div class="about-card-glow"></div>
                         <div class="about-card-icon-wrap">
@@ -229,7 +231,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-card">
+                <div class="about-card reveal">
                     <div class="about-card-inner">
                         <div class="about-card-glow"></div>
                         <div class="about-card-icon-wrap">
@@ -254,11 +256,14 @@
 
         <div class="container">
             <div class="payouts-header">
-                <div>
+                <div class="payouts-title-wrapper reveal">
                     <div class="about-section-badge">💰 Dovezi Reale</div>
-                    <h2 class="section-title">Payouts</h2>
+                    <h2 class="section-title" style="margin-bottom: 0;">Payouts</h2>
                 </div>
-                <div class="payouts-total">
+                <div class="payouts-middle-text reveal delay-1">
+                    <p>Rezultatele vorbesc de la sine. Mai jos ai acces la o parte din retragerile obținute, dovedind consistența și profitabilitatea tranzacțiilor.</p>
+                </div>
+                <div class="payouts-total reveal delay-2">
                     <span class="payouts-total-value">$115K<span class="highlight">+</span></span>
                     <span class="payouts-total-label">Total Payouts</span>
                 </div>
@@ -266,66 +271,66 @@
 
             <div class="payouts-grid">
                 <!-- Payout Certificate 1 -->
-                <div class="payout-card">
+                <div class="payout-card reveal">
                     <div class="payout-card-border"></div>
                     <div class="payout-card-inner">
-                        <img src="08772682-6761-4a80-ba58-fcea1a95e7c5.jpg" class="payout-image" alt="Payout Certificate 1">
+                        <img src="08772682-6761-4a80-ba58-fcea1a95e7c5.jpg" class="payout-image" loading="lazy" alt="Payout Certificate 1">
                     </div>
                 </div>
                 <!-- Payout Certificate 2 -->
-                <div class="payout-card">
+                <div class="payout-card reveal">
                     <div class="payout-card-border"></div>
                     <div class="payout-card-inner">
-                        <img src="67cae879-8051-4b0c-92c0-413c6e361080.jpg" class="payout-image" alt="Payout Certificate 2">
+                        <img src="67cae879-8051-4b0c-92c0-413c6e361080.jpg" class="payout-image" loading="lazy" alt="Payout Certificate 2">
                     </div>
                 </div>
                 <!-- Payout Certificate 3 -->
-                <div class="payout-card">
+                <div class="payout-card reveal">
                     <div class="payout-card-border"></div>
                     <div class="payout-card-inner">
-                        <img src="683a6ced-41a9-4599-9208-46a903403b1b.jpg" class="payout-image" alt="Payout Certificate 3">
+                        <img src="683a6ced-41a9-4599-9208-46a903403b1b.jpg" class="payout-image" loading="lazy" alt="Payout Certificate 3">
                     </div>
                 </div>
                 <!-- Payout Certificate 4 -->
-                <div class="payout-card">
+                <div class="payout-card reveal">
                     <div class="payout-card-border"></div>
                     <div class="payout-card-inner">
-                        <img src="73634411-6153-4862-99cc-9ebf17facb2c.jpg" class="payout-image" alt="Payout Certificate 4">
+                        <img src="73634411-6153-4862-99cc-9ebf17facb2c.jpg" class="payout-image" loading="lazy" alt="Payout Certificate 4">
                     </div>
                 </div>
                 <!-- Payout Certificate 5 -->
-                <div class="payout-card">
+                <div class="payout-card reveal">
                     <div class="payout-card-border"></div>
                     <div class="payout-card-inner">
-                        <img src="bd6b4cac-a471-4f41-8dda-525786ee85ed.jpg" class="payout-image" alt="Payout Certificate 5">
+                        <img src="bd6b4cac-a471-4f41-8dda-525786ee85ed.jpg" class="payout-image" loading="lazy" alt="Payout Certificate 5">
                     </div>
                 </div>
                 <!-- Payout Certificate 6 -->
-                <div class="payout-card">
+                <div class="payout-card reveal">
                     <div class="payout-card-border"></div>
                     <div class="payout-card-inner">
-                        <img src="ca3324c0-ea8d-4a7c-ae4f-3666a5e8d7d1.jpg" class="payout-image" alt="Payout Certificate 6">
+                        <img src="ca3324c0-ea8d-4a7c-ae4f-3666a5e8d7d1.jpg" class="payout-image" loading="lazy" alt="Payout Certificate 6">
                     </div>
                 </div>
                 <!-- Payout Certificate 7 -->
-                <div class="payout-card">
+                <div class="payout-card reveal">
                     <div class="payout-card-border"></div>
                     <div class="payout-card-inner">
-                        <img src="d8277f6f-9431-4069-85af-78d78e88767b (1).jpg" class="payout-image" alt="Payout Certificate 7">
+                        <img src="d8277f6f-9431-4069-85af-78d78e88767b (1).jpg" class="payout-image" loading="lazy" alt="Payout Certificate 7">
                     </div>
                 </div>
                 <!-- Payout Certificate 8 -->
-                <div class="payout-card">
+                <div class="payout-card reveal">
                     <div class="payout-card-border"></div>
                     <div class="payout-card-inner">
-                        <img src="feb530cc-1ac0-4d38-b302-5cdf34244630.jpg" class="payout-image" alt="Payout Certificate 8">
+                        <img src="feb530cc-1ac0-4d38-b302-5cdf34244630.jpg" class="payout-image" loading="lazy" alt="Payout Certificate 8">
                     </div>
                 </div>
                 <!-- Payout Certificate 9 -->
-                <div class="payout-card">
+                <div class="payout-card reveal">
                     <div class="payout-card-border"></div>
                     <div class="payout-card-inner">
-                        <img src="6551e799-a952-4806-8568-dba0c472836a.jpg" class="payout-image" alt="Payout Certificate 9">
+                        <img src="6551e799-a952-4806-8568-dba0c472836a.jpg" class="payout-image" loading="lazy" alt="Payout Certificate 9">
                     </div>
                 </div>
             </div>
@@ -341,22 +346,22 @@
         <div class="container">
             <div class="cert-grid">
                 <!-- Left: Certificate Image -->
-                <div class="cert-image-col">
+                <div class="cert-image-col reveal">
                     <div class="cert-visual-wrapper" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
                         <div class="image-glow-aura"></div>
                         <div class="image-frame">
                             <div class="image-frame-border"></div>
-                            <img src="bd2b1a18-b6f2-40f3-af19-17aa65ec93b2.jpg" alt="CMSA Certificate" class="cert-image payout-image">
+                            <img src="bd2b1a18-b6f2-40f3-af19-17aa65ec93b2.jpg" alt="CMSA Certificate" class="cert-image payout-image" loading="lazy">
                         </div>
                     </div>
                 </div>
 
                 <!-- Right: Text Content -->
                 <div class="cert-text-col">
-                    <div class="about-section-badge">🏆 CERTIFICARE INTERNAȚIONALĂ</div>
-                    <h2 class="section-title cert-hero-title">Trader Certificat <br><span class="cert-neon-text">CFI / CMSA®</span></h2>
+                    <div class="about-section-badge reveal">🏆 CERTIFICARE INTERNAȚIONALĂ</div>
+                    <h2 class="section-title cert-hero-title reveal delay-1">Trader Certificat <br><span class="cert-neon-text">CFI / CMSA®</span></h2>
                     
-                    <div class="cert-description">
+                    <div class="cert-description reveal delay-2">
                         <p>Sunt certificat internațional de CFI care atestă cunoștințe avansate de Trading și Piețe Financiare, astfel încât să-mi lărgesc know-how-ul în domeniu și să fiu și atestat „cu diplomă”.</p>
                         <p><strong>CFI (Corporate Finance Institute)</strong> este un program de multiple certificări pentru persoane care merg spre o carieră în piețe de capital. Personal mi-am obținut licența de CMSA!</p>
                         <p><strong>CMSA</strong> – Capital Markets & Securities Analyst — o certificare de la CFI care te formează pe piețe de capital și instrumente financiare (acțiuni, obligațiuni, FX, mărfuri, derivate), pentru roluri de tip buy-side și sell-side (trading, research, asset management).</p>
@@ -366,7 +371,7 @@
             </div>
 
             <!-- Skill Tags Moved Below Grid -->
-            <div class="skill-tags skill-tags-fullwidth">
+            <div class="skill-tags skill-tags-fullwidth reveal delay-3">
                 <span class="skill-tag">Piețe de Capital</span>
                 <span class="skill-tag">FX & Commodities</span>
                 <span class="skill-tag">Trading & Research</span>
@@ -378,23 +383,82 @@
     <!-- 5. Mentorat Section -->
     <section class="mentorship-section" id="mentorat">
         <div class="container">
-            <h2 class="section-title text-center">Mentorat & <span class="highlight">Rezultate</span></h2>
-            <p class="section-description text-center">Feedback din partea comunității și a celor care au urmat
-                analizele zilnice.</p>
+            <div class="reveal text-center" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 2rem;">
+                <div class="about-section-badge text-center" style="margin-bottom: 1.5rem;">MENTORAT</div>
+                <h2 class="section-title">Feedback <span class="highlight">Mentorat</span></h2>
+            </div>
+            
+            <div class="reveal delay-1 text-center" style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <p class="section-description" style="max-width: 600px; margin-bottom: 0;">
+                    Feedback real de la traderii care au trecut prin programul de mentorat.
+                </p>
+            </div>
 
-            <div class="feedback-grid">
-                <!-- User adds feedback screenshots here -->
-                <div class="feedback-card glass-panel">
-                    <div class="placeholder-feedback">🚀 "Am trecut evaluarea de 50k în doar două săptămâni urmărind
-                        analizele zilnice!" - Elev</div>
-                </div>
-                <div class="feedback-card glass-panel">
-                    <div class="placeholder-feedback">📊 "Mentorat extraordinar. Claritate maximă pe grafic și risk
-                        management adevărat." - Elev</div>
-                </div>
-                <div class="feedback-card glass-panel">
-                    <div class="placeholder-feedback">💵 "Primul payout obținut mulțumită direcției zilnice din grup." -
-                        Elev</div>
+            <div class="feedback-swiper-container">
+                <div class="swiper feedback-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Screenshot 1 -->
+                        <div class="swiper-slide feedback-gallery-card reveal delay-1">
+                            <div class="feedback-card-border"></div>
+                            <div class="feedback-card-inner">
+                                <img src="65098572-6dd6-482e-9b1d-1347d9f67d5f.jpg" alt="Feedback Mentorat 1" class="feedback-image" loading="lazy">
+                            </div>
+                        </div>
+                        <!-- Screenshot 2 -->
+                        <div class="swiper-slide feedback-gallery-card reveal delay-2">
+                            <div class="feedback-card-border"></div>
+                            <div class="feedback-card-inner">
+                                <img src="b68fec56-a2db-439e-8009-dc486152b7d1.jpg" alt="Feedback Mentorat 2" class="feedback-image" loading="lazy">
+                            </div>
+                        </div>
+                        <!-- Screenshot 3 -->
+                        <div class="swiper-slide feedback-gallery-card reveal delay-3">
+                            <div class="feedback-card-border"></div>
+                            <div class="feedback-card-inner">
+                                <img src="ba872ba6-aa2e-4cc1-8588-3a8f094e4e51.jpg" alt="Feedback Mentorat 3" class="feedback-image" loading="lazy">
+                            </div>
+                        </div>
+                        <!-- Screenshot 4 -->
+                        <div class="swiper-slide feedback-gallery-card reveal delay-4">
+                            <div class="feedback-card-border"></div>
+                            <div class="feedback-card-inner">
+                                <img src="bec5141c-af18-450c-8621-85dc2622a268.jpg" alt="Feedback Mentorat 4" class="feedback-image" loading="lazy">
+                            </div>
+                        </div>
+                        <!-- Screenshot 5 -->
+                        <div class="swiper-slide feedback-gallery-card reveal delay-1">
+                            <div class="feedback-card-border"></div>
+                            <div class="feedback-card-inner">
+                                <img src="d6235816-b1b4-415d-ac0e-244a438f1055.jpg" alt="Feedback Mentorat 5" class="feedback-image" loading="lazy">
+                            </div>
+                        </div>
+                        <!-- Screenshot 6 -->
+                        <div class="swiper-slide feedback-gallery-card reveal delay-2">
+                            <div class="feedback-card-border"></div>
+                            <div class="feedback-card-inner">
+                                <img src="dc99b17a-81d2-4593-bb26-9489f2ce313f.jpg" alt="Feedback Mentorat 6" class="feedback-image" loading="lazy">
+                            </div>
+                        </div>
+                        <!-- Screenshot 7 -->
+                        <div class="swiper-slide feedback-gallery-card reveal delay-3">
+                            <div class="feedback-card-border"></div>
+                            <div class="feedback-card-inner">
+                                <img src="ea6b71d1-049b-4f90-85f9-657e19de54df.jpg" alt="Feedback Mentorat 7" class="feedback-image" loading="lazy">
+                            </div>
+                        </div>
+                        <!-- Screenshot 8 -->
+                        <div class="swiper-slide feedback-gallery-card reveal delay-4">
+                            <div class="feedback-card-border"></div>
+                            <div class="feedback-card-inner">
+                                <img src="fd39d547-d4fc-4022-ae0a-d288f2d84a86.jpg" alt="Feedback Mentorat 8" class="feedback-image" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Swiper Navigation -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
 
@@ -479,6 +543,8 @@
         <img class="modal-content" id="modalImage">
     </div>
 
+    <!-- Swiper.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Interactive script -->
     <script src="main.js"></script>
 </body>

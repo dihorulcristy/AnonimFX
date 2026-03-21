@@ -221,13 +221,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalImg = document.getElementById("modalImage");
     const closeBtn = document.getElementById("closeModal");
 
-    const imagesToEnlarge = document.querySelectorAll('.payout-image');
+    const imagesToEnlarge = document.querySelectorAll('.payout-image, .feedback-image');
     
     imagesToEnlarge.forEach(img => {
         img.style.cursor = 'pointer';
 
         // Support clicking on the parent card if it's a grid item wrapper
-        const parentCard = img.closest('.payout-card');
+        const parentCard = img.closest('.payout-card, .feedback-gallery-card');
         if (parentCard) {
             parentCard.style.cursor = 'pointer';
             parentCard.addEventListener('click', function(e) {
@@ -281,6 +281,75 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && modal.classList.contains('show')) {
                 closeModalFunc();
+            }
+        });
+    }
+
+    // =============================================
+    // 9. Scroll Reveal Animations
+    // =============================================
+    const revealElements = document.querySelectorAll('.reveal');
+    if (revealElements.length > 0) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Stop observing once it has animated in
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    }
+
+    // =============================================
+    // 10. Swiper Initialization (Mentorat Gallery)
+    // =============================================
+    if (document.querySelector('.feedback-swiper')) {
+        const feedbackSwiper = new Swiper('.feedback-swiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop: true,
+            speed: 800,
+            coverflowEffect: {
+                rotate: 30,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                    }
+                },
+                768: {
+                    slidesPerView: 'auto',
+                }
             }
         });
     }

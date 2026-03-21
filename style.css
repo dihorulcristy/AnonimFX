@@ -1223,11 +1223,33 @@ a {
 
 .payouts-header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 4rem;
     position: relative;
     z-index: 2;
+    gap: 2rem;
+    text-align: left;
+}
+
+.payouts-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.payouts-middle-text {
+    flex: 1;
+    max-width: 500px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-left: 2px solid rgba(0, 210, 106, 0.4);
+    padding-left: 1.5rem;
+    margin: 0 auto;
 }
 
 .payouts-total {
@@ -1236,12 +1258,13 @@ a {
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(0, 210, 106, 0.3);
     border-radius: 16px;
-    padding: 1.5rem 2.5rem;
-    display: flex;
+    padding: 1.25rem 3rem;
+    display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 210, 106, 0.1);
     animation: pulseGlow 4s infinite alternate;
+    flex-shrink: 0;
 }
 
 .payouts-total-value {
@@ -1376,6 +1399,8 @@ a {
     -webkit-backdrop-filter: blur(15px);
     opacity: 0;
     transition: opacity 0.3s ease;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-modal.show {
@@ -1576,6 +1601,28 @@ a {
     margin-top: 1.5rem;
 }
 
+/* =========================================
+   Scroll Reveal Animations
+   ========================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+
 .skill-tag {
     background: linear-gradient(135deg, rgba(0, 210, 106, 0.15), rgba(59, 130, 246, 0.1));
     backdrop-filter: blur(12px);
@@ -1613,20 +1660,134 @@ a {
     margin-bottom: 4rem;
 }
 
-.feedback-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
+.feedback-swiper-container {
+    width: 100%;
+    padding: 2rem 0 5rem;
+    position: relative;
+    overflow: hidden;
 }
 
-.feedback-card {
+.feedback-swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide.feedback-gallery-card {
+    background-position: center;
+    background-size: cover;
+    width: 320px !important;
+    height: auto;
+    background: transparent;
+    border: none;
+    cursor: grab;
+}
+
+.swiper-slide:active {
+    cursor: grabbing;
+}
+
+/* Custom Swiper Navigation */
+.feedback-swiper .swiper-button-next,
+.feedback-swiper .swiper-button-prev {
+    color: var(--accent-green);
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 210, 106, 0.3);
+    transition: all 0.3s ease;
+}
+
+.feedback-swiper .swiper-button-next:after,
+.feedback-swiper .swiper-button-prev:after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.feedback-swiper .swiper-button-next:hover,
+.feedback-swiper .swiper-button-prev:hover {
+    background: var(--accent-green);
+    color: var(--bg-primary);
+    box-shadow: 0 0 20px rgba(0, 210, 106, 0.4);
+}
+
+.feedback-swiper .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 1;
+}
+
+.feedback-swiper .swiper-pagination-bullet-active {
+    background: var(--accent-green);
+    box-shadow: 0 0 10px var(--accent-green);
+}
+
+@media (max-width: 768px) {
+    .swiper-slide.feedback-gallery-card {
+        width: 280px !important;
+    }
+    
+    .feedback-swiper .swiper-button-next,
+    .feedback-swiper .swiper-button-prev {
+        display: none; /* Hide arrows on mobile for better touch experience */
+    }
+}
+
+.feedback-gallery-card {
+    position: relative;
+    border-radius: 12px;
+    padding: 2px;
+    background: rgba(255, 255, 255, 0.03);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feedback-gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 210, 106, 0.15);
+    z-index: 10;
+}
+
+.feedback-card-border {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(130deg, rgba(255, 255, 255, 0.1), transparent 70%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+.feedback-gallery-card:hover .feedback-card-border {
+    background: linear-gradient(130deg, var(--accent-green) 0%, rgba(59, 130, 246, 0.5) 100%);
+}
+
+.feedback-card-inner {
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 15, 25, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 150px;
-    font-style: italic;
-    color: var(--text-secondary);
+}
+
+.feedback-image {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: block;
+}
+
+.feedback-gallery-card:hover .feedback-image {
+    transform: scale(1.03);
 }
 
 /* =========================================
@@ -1878,9 +2039,22 @@ a {
 
     .payouts-header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 2rem;
+        align-items: center;
+        gap: 1.5rem;
         margin-bottom: 2.5rem;
+        text-align: center;
+    }
+
+    .payouts-title-wrapper {
+        align-items: center;
+    }
+
+    .payouts-middle-text {
+        border-left: none;
+        border-top: 1px solid rgba(0, 210, 106, 0.2);
+        padding-left: 0;
+        padding-top: 1.5rem;
+        text-align: center;
     }
 
     .payouts-total {
