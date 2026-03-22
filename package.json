@@ -1,0 +1,21 @@
+{
+  "name": "anonim-fx",
+  "version": "1.0.0",
+  "description": "AnonimFX - Trading Community and Mentorship Platform",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "lint": "echo 'No linter configured'"
+  },
+  "keywords": [
+    "trading",
+    "forex",
+    "mentorship"
+  ],
+  "author": "Silviu Dumitras",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.14"
+  }
+}
