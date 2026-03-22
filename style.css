@@ -2222,7 +2222,19 @@ a {
 /* =========================================
    Responsive Design
    ========================================= */
+.hide-on-desktop {
+    display: none !important;
+}
+
 @media (max-width: 900px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+    
+    .hide-on-desktop {
+        display: block !important;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
