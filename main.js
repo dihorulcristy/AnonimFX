@@ -115,15 +115,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fadeElements.forEach(el => {
         gsap.fromTo(el,
-            { y: 60, opacity: 0 },
+            { y: 30, opacity: 0 },
             {
                 y: 0,
                 opacity: 1,
-                duration: 1,
-                ease: "power3.out",
+                duration: 0.6,
+                ease: "power2.out",
                 scrollTrigger: {
                     trigger: el,
-                    start: "top 88%",
+                    start: "top 92%",
                     toggleActions: "play none none reverse"
                 }
             }
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalImg = document.getElementById("modalImage");
     const closeBtn = document.getElementById("closeModal");
 
-    const imagesToEnlarge = document.querySelectorAll('.payout-image, .feedback-image');
+    const imagesToEnlarge = document.querySelectorAll('.payout-image, .feedback-image, .community-slider-img');
     
     imagesToEnlarge.forEach(img => {
         img.style.cursor = 'pointer';
@@ -300,8 +300,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, {
             root: null,
-            threshold: 0.15,
-            rootMargin: "0px 0px -50px 0px"
+            threshold: 0.05,
+            rootMargin: "0px"
         });
 
         revealElements.forEach(el => revealObserver.observe(el));
