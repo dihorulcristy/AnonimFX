@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politica de Cookies | AnonimFX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .legal-page { padding: 120px 20px 60px; max-width: 800px; margin: 0 auto; color: var(--text-secondary); }
+        .legal-page h1 { color: #fff; margin-bottom: 2rem; font-size: 2.5rem; text-align: center; }
+        .legal-page h2 { color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .legal-page p, .legal-page li { margin-bottom: 1rem; line-height: 1.6; font-size: 1rem; }
+        .legal-page a { color: var(--accent-green); text-decoration: none; }
+    </style>
+</head>
+<body class="dark-theme">
+    <div id="particles-js" class="particles-container"></div>
+    <nav class="floating-nav">
+        <a href="index.html" class="nav-brand" style="text-decoration: none;">
+            <span class="brand-name"><span class="brand-fx">ANONIM</span><span class="brand-accent">FX</span></span>
+        </a>
+        <a href="index.html" style="color: #fff; text-decoration: none; font-weight: 600;">&larr; Înapoi</a>
+    </nav>
+    <main class="legal-page">
+        <h1>Politica de Cookies</h1>
+        <p>Ultima actualizare: Martie 2026</p>
+        <h2>Ce sunt modulele cookie?</h2>
+        <p>Cookie-urile sunt fișiere text mici care sunt salvate pe calculatorul sau dispozitivul dumneavoastră mobil atunci când vizitați site-ul nostru. Ele permit site-ului să rețină acțiunile și preferințele dumneavoastră (cum ar fi consimțământul) pe o anumită perioadă de timp.</p>
+        <h2>Cum utilizăm cookie-urile?</h2>
+        <p>Folosim cookie-uri pentru a:</p>
+        <ul>
+            <li>Înțelege și salva preferințele dumneavoastră pentru vizitele viitoare (ex. banner-ul de cookie-uri).</li>
+            <li>Colecta date agregate despre traficul pe site și interacțiunile de pe site (prin instrumente precum Google Analytics, în scop de marketing - Google Ads).</li>
+            <li>Urmări performanța reclamelor.</li>
+        </ul>
+        <h2>Gestionarea cookie-urilor</h2>
+        <p>Puteți controla și/sau șterge cookie-urile după bunul plac. Puteți șterge toate cookie-urile care sunt deja pe calculatorul dumneavoastră și puteți seta majoritatea browserelor să împiedice plasarea acestora. Totuși, dacă faceți acest lucru, este posibil să fiți nevoit să ajustați manual unele preferințe de fiecare dată când vizitați site-ul nostru.</p>
+        <div style="margin-top: 3rem; text-align: center;">
+            <button id="reset-cookies" class="modern-telegram-btn" style="border:none; cursor:pointer;" onclick="localStorage.removeItem('cookieConsent'); alert('Preferințele cookie au fost resetate.'); window.location.href='index.html';">
+                <span>Resetează Consimțământul</span>
+            </button>
+        </div>
+    </main>
+</body>
+</html>

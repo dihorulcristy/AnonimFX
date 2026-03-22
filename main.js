@@ -353,4 +353,50 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // =============================================
+    // 11. Swiper Initialization (Comunitate Gallery)
+    // =============================================
+    if (document.querySelector('.community-swiper')) {
+        const communitySwiper = new Swiper('.community-swiper', {
+            effect: 'slide',
+            grabCursor: true,
+            slidesPerView: 1,
+            loop: true,
+            speed: 600,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.community-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.community-button-next',
+                prevEl: '.community-button-prev',
+            }
+        });
+    }
+
+    // =============================================
+    // 12. Cookie Consent Logic
+    // =============================================
+    const cookieBanner = document.getElementById('cookie-consent-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+
+    if (cookieBanner && acceptBtn) {
+        // Check if user already accepted
+        if (!localStorage.getItem('cookieConsent')) {
+            // Show perfectly after a short delay
+            setTimeout(() => {
+                cookieBanner.classList.add('show');
+            }, 1500);
+        }
+
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'true');
+            cookieBanner.classList.remove('show');
+        });
+    }
 });
