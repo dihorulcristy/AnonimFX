@@ -204,6 +204,8 @@ a {
     border-right: 1px solid rgba(255, 255, 255, 0.08);
     cursor: pointer;
     transition: all 0.3s ease;
+    color: inherit;
+    text-decoration: none;
 }
 
 .nav-brand:hover {
