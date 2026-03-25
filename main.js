@@ -208,8 +208,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // =============================================
     // 7. Dynamic Links Setup
     // =============================================
-    const TELEGRAM_LINK = "https://t.me/anonimfxro";
-    const ctaButtons = document.querySelectorAll('a[href="https://t.me/anonimfxro"]');
+    const TELEGRAM_LINK = "https://t.me/+CEHWNPRkwptlOWY8";
+    const ctaButtons = document.querySelectorAll('a[href="https://t.me/+CEHWNPRkwptlOWY8"]');
     ctaButtons.forEach(btn => {
         btn.href = TELEGRAM_LINK;
     });
