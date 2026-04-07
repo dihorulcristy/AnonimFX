@@ -399,4 +399,71 @@ document.addEventListener('DOMContentLoaded', () => {
             cookieBanner.classList.remove('show');
         });
     }
+
+    // =============================================
+    // 13. Newsletter Pop-up Logic
+    // =============================================
+    const nlModal = document.getElementById('newsletterModal');
+    const btnOpenNl = document.getElementById('open-newsletter-btn');
+    const closeBtnNl = document.getElementById('closeNewsletterModal');
+    const popForm = document.getElementById('popupNewsletterForm');
+
+    const openNlModal = (e) => {
+        if(e) e.preventDefault();
+        if(nlModal) {
+            nlModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+    };
+
+    const closeNlModal = () => {
+        if(nlModal) {
+            nlModal.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+    };
+
+    if (btnOpenNl) {
+        btnOpenNl.addEventListener('click', openNlModal);
+    }
+
+    if (closeBtnNl) {
+        closeBtnNl.addEventListener('click', closeNlModal);
+    }
+
+    if (nlModal) {
+        nlModal.addEventListener('click', (e) => {
+            if (e.target === nlModal) {
+                closeNlModal();
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && nlModal.classList.contains('show')) {
+                closeNlModal();
+            }
+        });
+        
+        // Auto pop-up after 1 second 
+        setTimeout(() => {
+            openNlModal();
+        }, 1000);
+    }
+
+    if (popForm) {
+        popForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = popForm.querySelector('.pop-submit');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Te-ai abonat cu succes! 🎉';
+            btn.style.background = '#fff';
+            
+            setTimeout(() => {
+                popForm.reset();
+                btn.innerHTML = originalText;
+                btn.style.background = ''; // Reverts to CSS default var(--accent-green)
+                closeNlModal();
+            }, 2500);
+        });
+    }
 });
