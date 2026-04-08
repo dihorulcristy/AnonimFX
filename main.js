@@ -444,10 +444,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        // Auto pop-up after 1 second 
-        setTimeout(() => {
-            openNlModal();
-        }, 1000);
+        // Auto pop-up logic: 50% scroll or exit intent
+        let popupShownThisSession = false;
+
+        const triggerNewsletterPopup = () => {
+            if (!popupShownThisSession) {
+                openNlModal();
+                popupShownThisSession = true;
+            }
+        };
+
+        // Trigger on 50% scroll
+        window.addEventListener('scroll', () => {
+            if (popupShownThisSession) return;
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            if (scrollPercent >= 50) {
+                triggerNewsletterPopup();
+            }
+        });
+
+        // Trigger on exit intent (mouse leaving window top)
+        document.addEventListener('mouseleave', (e) => {
+            if (popupShownThisSession) return;
+            if (e.clientY <= 0) {
+                triggerNewsletterPopup();
+            }
+        });
     }
 
     if (popForm) {
