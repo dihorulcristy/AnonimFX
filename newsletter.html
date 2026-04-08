@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .newsletter-page { padding: 120px 20px 60px; max-width: 600px; margin: 0 auto; color: var(--text-secondary); text-align: center; }
+        .newsletter-page { padding: 120px 20px 60px; max-width: 600px; margin: 0 auto; color: var(--text-secondary); text-align: center; position: relative; z-index: 2; }
         .newsletter-page h1 { color: #fff; margin-bottom: 1rem; font-size: 2.5rem; }
         .newsletter-page p { margin-bottom: 2.5rem; font-size: 1.1rem; line-height: 1.6; }
         .newsletter-form { 
@@ -136,14 +136,16 @@
         </div>
         
         <div class="newsletter-form" style="padding: 30px; border-radius: 16px;">
-            <form action="#" method="POST" id="newsletterForm">
+            <form action="https://784ce035.sibforms.com/serve/MUIFAN1-w-_Ip26sgfCmI8vv4q4_1_R_CrGKVdmeX-pexxJkWD0RMPoD8MpFY8Qil8NLWymtWKAE9CIO9Ud3TJBuKBNVwZQ9cTP4VHqlfUNjm2uJYuc_KpWQnLTXiobGUeMTCAMwBmFUdd4XBgi_SPeSyxbc4ZKQtKxAjyLHdK9cDO9G14UCpgr9Q1UTFU7pAHUUPSCGOQU-XftrAg==" method="POST" id="newsletterForm">
+                <input type="hidden" name="email_address_check" value="">
+                <input type="hidden" name="locale" value="en">
                 <div class="premium-input-group">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="input-icon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                    <input type="text" id="name" name="name" placeholder="Numele tău" required>
+                    <input type="text" id="name" name="FIRSTNAME" placeholder="Numele tău" required>
                 </div>
                 <div class="premium-input-group">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="input-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    <input type="email" id="email" name="email" placeholder="Adresa de email" required>
+                    <input type="email" id="email" name="EMAIL" placeholder="Adresa de email" required>
                 </div>
                 <button type="submit" class="submit-btn cro-btn pulse-glow" style="margin-top: 1rem;">
                     VREAU SĂ MĂ ABONEZ
@@ -162,6 +164,15 @@
         // Simple script to handle form submission gracefully without refreshing
         document.getElementById('newsletterForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            // Send data to Brevo silently
+            const formData = new FormData(this);
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).catch(err => console.error('Subscription error:', err));
+
             const btn = this.querySelector('.submit-btn');
             const originalContent = btn.innerHTML;
             btn.innerHTML = 'Te-ai abonat cu succes! 🎉';

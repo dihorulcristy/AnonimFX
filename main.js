@@ -475,7 +475,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (popForm) {
         popForm.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            // Send data to Brevo silently
+            const formData = new FormData(popForm);
+            fetch(popForm.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).catch(err => console.error('Subscription error:', err));
+
             const btn = popForm.querySelector('.pop-submit');
+            if (!btn) return;
             const originalText = btn.innerHTML;
             btn.innerHTML = 'Te-ai abonat cu succes! 🎉';
             btn.style.background = '#fff';
