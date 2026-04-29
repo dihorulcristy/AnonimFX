@@ -206,12 +206,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =============================================
-    // 7. Dynamic Links Setup
+    // 7. Dynamic Links Setup & reCAPTCHA Protection
     // =============================================
     const TELEGRAM_LINK = "https://t.me/+CEHWNPRkwptlOWY8";
-    const ctaButtons = document.querySelectorAll('a[href="https://t.me/+CEHWNPRkwptlOWY8"]');
+    const RECAPTCHA_SITE_KEY = "6Ld9qNAsAAAAAP5OZ9GD-IuPp0dzLUHRvhy7ulcr";
+    
+    const ctaButtons = document.querySelectorAll('a[href="https://t.me/+CEHWNPRkwptlOWY8"], .modern-telegram-btn, .nav-cta, .cta-button');
+    
     ctaButtons.forEach(btn => {
-        btn.href = TELEGRAM_LINK;
+        // We only want to protect the Telegram buttons
+        if (btn.href === TELEGRAM_LINK || btn.getAttribute('href') === TELEGRAM_LINK) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (typeof grecaptcha !== 'undefined' && grecaptcha.execute) {
+                    grecaptcha.ready(function() {
+                        grecaptcha.execute(RECAPTCHA_SITE_KEY, {action: 'telegram_click'}).then(function(token) {
+                            window.open(TELEGRAM_LINK, btn.getAttribute('target') || '_self');
+                        }).catch(function() {
+                            window.open(TELEGRAM_LINK, btn.getAttribute('target') || '_self');
+                        });
+                    });
+                } else {
+                    window.open(TELEGRAM_LINK, btn.getAttribute('target') || '_self');
+                }
+            });
+        }
     });
 
     // =============================================
